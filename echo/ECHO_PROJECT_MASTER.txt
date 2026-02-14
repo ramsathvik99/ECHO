@@ -1,0 +1,123 @@
+1️⃣ PROJECT TITLE
+
+ECHO – AI Emotional Communication Companion
+
+2️⃣ PROBLEM STATEMENT
+
+Digital communication lacks emotional clarity. In our fast-paced texting culture:
+- Misunderstandings damage personal and professional relationships.
+- Tone is frequently lost or misinterpreted in text-only messages.
+- People often react impulsively, sending emotional messages they later regret.
+- Communicating complex feelings without manual "safety nets" leads to unnecessary conflict.
+
+3️⃣ SOLUTION OVERVIEW
+
+ECHO is an intelligent emotional bridge designed to strengthen human connection. By leveraging advanced AI, ECHO provides:
+- AI-powered emotional analysis to reveal hidden subtext.
+- Real-time tone detection and conflict risk prediction.
+- Soft-rewrite suggestions that transform friction into clarity.
+- A surgical strategy planner for high-stakes conversations.
+- Dedicated Professional, Affinity, and Dating modes for context-aware advice.
+
+ECHO doesn't just send messages; it refines how we connect.
+
+4️⃣ FEATURE LIST WITH SAMPLE INPUTS
+
+A. Emotional Analysis Mode (Resonance)
+Description: Extracts the "signal" from the noise, identifying the primary emotion and intensity.
+Sample Input: “You never listen to me.”
+Sample Output: 
+- Emotion: Hurt
+- Tone: Accusatory
+- Conflict Risk: High
+- Interpretation: Sounds blaming.
+
+B. Soft Rewrite Mode (Refinement)
+Description: Gently adjusts the tone of your draft to be more constructive while keeping the core message.
+Sample Input: “You never listen to me.”
+Sample Output: “I’ve been feeling unheard lately. Can we talk about it?”
+
+C. Corporate Mode (Professional Polish)
+Description: Converts raw thoughts into professional, assertive, and concise English.
+Sample Input: “Can you approve my leave tomorrow?”
+Sample Output: “I would appreciate your approval for leave tomorrow. Please let me know if this works.”
+
+D. Smart Reply Generator (Interaction)
+Description: Provides situational replies across 6 different emotional spectrums.
+Sample Input: “Fine. Do whatever you want.”
+Sample Output: 
+- Calm Reply: “I sense something’s wrong. Do you want to talk about it?”
+
+E. Strategy Planner (Architect)
+Description: A structured 4-step plan for navigating sensitive goals.
+Sample Input: “I want to tell my boss I need leave.”
+Sample Output:
+- Opening: “I’d like to discuss a short leave request.”
+- Main Point: “I need a day off due to personal reasons.”
+- Possible Reaction: “They may ask about deadlines.”
+- Closing: “I’ll ensure my tasks are completed beforehand.”
+
+F. Dating Mode (Affinity)
+Description: Advice for romantic intelligence and vulnerability.
+Sample Input: “I want to confess my feelings.”
+Sample Output: “I’ve really enjoyed spending time with you. I’d love to explore something deeper if you feel the same.”
+
+G. Emotional Emergency Mode (Guardrails)
+Description: Detects high-intensity anger and suggests taking a cooling-off period.
+Sample Input: “I’m so angry I don’t care anymore.”
+Sample Output: 
+- Pause Suggestion: “Let’s take a moment before sending this.”
+
+5️⃣ TECHNICAL ARCHITECTURE
+
+ECHO is built on a modern, decoupled architecture:
+
+Frontend:
+- Structure: HTML5 Semantic Markup.
+- Styling: Custom Vanilla CSS with a focus on Glassmorphism and dark mode aesthetics.
+- Interactivity: JavaScript (ES6+) for explicit event wiring and dynamic DOM updates.
+
+Backend:
+- Framework: Flask (Python).
+- Engine: Hugging Face Inference API / LLM Integration.
+- Communication: Asynchronous Fetch API using structured JSON schemas for 100% data integrity.
+
+How it works:
+1. User interacts with the UI (e.g., enters a message).
+2. Frontend sends a POST request with JSON payload to the Flask backend.
+3. Backend processes the request through the LLM with few-shot prompts.
+4. Backend returns a strictly-formatted JSON response.
+5. Frontend parses the JSON and renders it into "Visual Blocks" for the user.
+
+6️⃣ HOW TO RUN
+
+Requirements:
+- Python 3.8+
+- Flask and Requests libraries.
+
+Installation:
+1. Navigate to the project directory.
+2. Install dependencies:
+   pip install -r requirements.txt
+3. Run the application:
+   python app.py
+
+Access:
+- Open your browser and go to: http://127.0.0.1:5000
+
+7️⃣ DEMO SCRIPT (2-MINUTE WALKTHROUGH)
+
+(0:00-0:30) Emotional Resonance
+“Welcome to ECHO. Let’s start with a common conflict. I type: ‘You never listen to me.’ When I hit Analyze, ECHO immediately identifies the primary emotion as 'Hurt' and flags a 'High' conflict risk. It tells me exactly how the other person will interpret this—preventing a fight before it starts.”
+
+(0:30-1:00) Refinement & Corporate
+“Now, let’s fix it. I click 'Rewrite' and ECHO turns that accusation into a vulnerable request: ‘I’ve been feeling unheard lately.’ If this were for a colleague, I’d toggle to 'Corporate Mode,' where ECHO polishes my draft into a professional, English-only request for leave, ensuring I land the right tone with my boss.”
+
+(1:00-1:30) Strategy Architect
+“For big conversations, we need a plan. I go to the 'Strategy' tab and enter: ‘I want to ask for a promotion.’ ECHO builds a 4-step path: an opening line, a main point, a way to handle a negative reaction, and a professional closing. It’s a roadmap for success.”
+
+(1:30-1:50) Dating & Replies
+“In dating, vulnerability is hard. Using 'Affinity Mode,' I can confess my feelings with a prompt that is natural and empathetic. And if I receive a tough text like ‘Do whatever you want,’ the 'Replies' generator gives me 6 smart options to keep the conversation healthy.”
+
+(1:50-2:00) Closing Impact
+“ECHO is more than a writing tool. It’s a translator for the heart. It brings emotional clarity back to digital communication, making every message an opportunity to connect rather than conflict. Thank you.”

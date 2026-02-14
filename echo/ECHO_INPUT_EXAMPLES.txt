@@ -1,0 +1,193 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ECHO - INPUT EXAMPLES GUIDE                              ║
+║                    Emotional AI Communication Assistant                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📝 This guide contains example inputs for each feature of the Echo application.
+🎯 Use these examples to understand what type of messages work best for each mode.
+
+═══════════════════════════════════════════════════════════════════════════════
+🏠 HOME PAGE
+═══════════════════════════════════════════════════════════════════════════════
+No input required - this is the main navigation page.
+
+═══════════════════════════════════════════════════════════════════════════════
+⚡ ANALYZE (RESONANCE SCAN)
+═══════════════════════════════════════════════════════════════════════════════
+📋 MESSAGE INPUT EXAMPLES:
+
+🔴 ANGRY/FRUSTRATED MESSAGES:
+• "I can't believe you did this again! You never listen to me."
+• "This is completely unacceptable and I'm done with your excuses."
+• "Why do you always make everything about yourself? It's so frustrating."
+
+😔 SAD/HURT MESSAGES:
+• "I feel really alone lately and I don't know what to do."
+• "It hurts when you don't acknowledge my efforts or feelings."
+• "I thought we were closer than this, but maybe I was wrong."
+
+💕 LOVE/AFFECTIONATE MESSAGES:
+• "You make my world brighter just by being in it."
+• "I appreciate everything you do for me, you're amazing."
+• "Thinking of you makes me smile even on tough days."
+
+😊 HAPPY/EXCITED MESSAGES:
+• "I got the promotion! I'm so excited and wanted to share with you first!"
+• "Today was absolutely perfect, thank you for making it special."
+• "I can't wait for our trip next week, it's going to be incredible!"
+
+😐 NEUTRAL/INFORMATIONAL:
+• "The meeting is scheduled for 3 PM tomorrow, please be on time."
+• "I need you to pick up groceries on your way home tonight."
+• "Don't forget about the dentist appointment on Friday."
+
+🤔 CONFUSED/UNCERTAIN:
+• "I'm not sure how to feel about what happened yesterday."
+• "Can you help me understand your perspective better?"
+• "I'm confused about where we stand right now."
+
+👥 RELATIONSHIP CONTEXT OPTIONS:
+• Stranger - For analyzing messages to people you don't know well
+• Friend - For casual friend communications
+• Partner - For romantic relationships
+• Boss/Professional - For workplace communications
+
+═══════════════════════════════════════════════════════════════════════════════
+✏️ REWRITE MODE
+═══════════════════════════════════════════════════════════════════════════════
+📋 ORIGINAL CONTENT EXAMPLES:
+
+🔄 HARSH TO SOFT:
+• Original: "You're wrong and need to fix this now."
+• Relationship: Partner
+• Style: Soft & Empathetic
+
+🔄 CASUAL TO PROFESSIONAL:
+• Original: "hey man, can u send me that thing ASAP"
+• Relationship: Colleague
+• Style: Professional
+
+🔄 INDIRECT TO DIRECT:
+• Original: "It would be nice if someone maybe helped with this..."
+• Relationship: Friend
+• Style: Direct but Kind
+
+🔄 FORMAL TO PLAYFUL:
+• Original: "I would like to inquire about your availability for the social gathering."
+• Relationship: Partner
+• Style: Playful
+
+💡 REWRITE STYLE OPTIONS:
+• Soft & Empathetic - Gentle, caring, understanding tone
+• Direct but Kind - Clear communication with compassion
+• Playful - Light, fun, with appropriate humor
+
+═══════════════════════════════════════════════════════════════════════════════
+🗺️ STRATEGY PLANNER
+═══════════════════════════════════════════════════════════════════════════════
+📋 STRATEGIC GOAL EXAMPLES:
+
+💬 DIFFICULT CONVERSATIONS:
+• "I need to tell my friend that their behavior is hurting me, but I want to preserve the friendship."
+• "How do I ask for a raise without sounding demanding or ungrateful?"
+• "I need to apologize to my partner for something I did wrong."
+
+🎯 PERSUASION SITUATIONS:
+• "I want my team to adopt a new workflow, but they're resistant to change."
+• "How can I convince my parents to support my career choice?"
+• "I need to get my roommate to start cleaning up more."
+
+🤝 RELATIONSHIP BUILDING:
+• "I want to deepen my connection with someone I'm dating."
+• "How do I rebuild trust after a misunderstanding?"
+• "I want to establish better boundaries with family members."
+
+📈 PROFESSIONAL GOALS:
+• "I need to negotiate better terms with a client."
+• "How do I present a controversial idea to my boss?"
+• "I want to resolve conflicts between team members."
+
+═══════════════════════════════════════════════════════════════════════════════
+💕 DATING MODE (AFFINITY)
+═══════════════════════════════════════════════════════════════════════════════
+📋 INTEREST INSIGHT EXAMPLES:
+
+😊 CRUSH INTEREST MESSAGES:
+• "Hey! I noticed we both like hiking. Want to go sometime?"
+• "I had a great time talking with you yesterday. Would love to do it again."
+• "Your laugh is contagious - you always make me smile."
+
+💬 TEXT MESSAGE ANALYSIS:
+• "They haven't replied to my message in 2 days, should I be worried?"
+• "They keep using emojis and exclamation points, is that a good sign?"
+• "They suggested we hang out 'sometime soon' - what does that mean?"
+
+🎯 FLIRTING EXAMPLES:
+• "I can't focus on work today because someone keeps popping into my thoughts 😉"
+• "If being cute was a crime, you'd be serving a life sentence."
+• "Are you a magician? Because whenever I look at you, everyone else disappears."
+
+💭 CONFESSION HELP:
+• "How do I tell my best friend I have feelings for them without ruining our friendship?"
+• "I want to tell someone I like them but I'm scared of rejection."
+• "Should I confess my feelings or wait for signs they might like me back?"
+
+═══════════════════════════════════════════════════════════════════════════════
+💼 PROFESSIONAL MODE
+═══════════════════════════════════════════════════════════════════════════════
+📋 WORK CORRESPONDENCE EXAMPLES:
+
+🔧 REMOVE PASSIVE LANGUAGE:
+• Original: "It might be beneficial if the report could possibly be completed by Friday."
+• Result: "Please complete the report by Friday."
+
+💪 MAKE ASSERTIVE:
+• Original: "I was wondering if maybe I could possibly take the lead on this project?"
+• Result: "I would like to take the lead on this project."
+
+🙏 PROFESSIONAL APOLOGY:
+• Original: "I'm so so so sorry I messed everything up I'm terrible I feel awful!"
+• Result: "I apologize for the oversight. I take responsibility and will ensure this doesn't happen again."
+
+📧 EMAIL EXAMPLES:
+• "Following up on our discussion from yesterday's meeting..."
+• "I would like to request your input on the proposed changes..."
+• "Thank you for your consideration of this matter..."
+
+═══════════════════════════════════════════════════════════════════════════════
+📊 INSIGHTS PAGE
+═══════════════════════════════════════════════════════════════════════════════
+No input required - this page shows your communication history and patterns.
+
+═══════════════════════════════════════════════════════════════════════════════
+🎯 PRO TIPS FOR BEST RESULTS:
+═══════════════════════════════════════════════════════════════════════════════
+✅ DO:
+• Be specific and detailed in your messages
+• Include context about the situation
+• Use real messages you've sent or received
+• Choose the correct relationship context
+• Consider the tone you want to convey
+
+❌ DON'T:
+• Use one-word messages (e.g., "hi", "ok", "lol")
+• Submit empty or placeholder text
+• Mix multiple unrelated messages in one input
+• Forget to set the relationship context
+• Expect perfect results - AI is a tool, not magic
+
+🔥 BEST PRACTICES:
+• Longer, more detailed messages get better analysis
+• Include emotional context when possible
+• Be honest about your true feelings and intentions
+• Use the insights to improve, not to manipulate
+• Remember that context matters in communication
+
+═══════════════════════════════════════════════════════════════════════════════
+💡 REMEMBER:
+═══════════════════════════════════════════════════════════════════════════════
+Echo is designed to help you understand and improve your emotional communication.
+The AI provides suggestions and insights, but you make the final decisions.
+Use these examples as starting points and adapt them to your real situations!
+
+💌 Happy communicating with ECHO! 💌

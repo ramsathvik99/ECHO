@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHO | Understand Before You Send</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="{{ page_class }} bg-animate scrollbar-hide">
+    <!-- Romantic Background Container -->
+    <div class="romantic-bg"></div>
+    
+    <!-- Floating Hearts Background - ALL PAGES -->
+    <div class="heart-bg"></div>
+    
+    <!-- Premium Overlays -->
+    <div class="moonlight-overlay"></div>
+    <div class="nova-particles-container" id="nova-particles"></div>
+    <div class="romantic-glow-container">
+        <div class="glow-blob glow-blob-1"></div>
+        <div class="glow-blob glow-blob-2"></div>
+    </div>
+    <div class="emotion-overlay"></div>
+    <div class="aurora-bg"></div>
+    <div id="particles-container"></div>
+
+    <div id="particles-container"></div>
+
+    <!-- 🔧 2️⃣ LAYOUT WRAPPER (Targeted by style.css) -->
+    <div class="layout-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav class="w-20 md:w-64 glass-panel border-r border-white/5 h-full flex flex-col items-center py-8 px-4 gap-8">
+            <div class="flex items-center gap-3 px-4 mb-4">
+                <div
+                    class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <i data-lucide="waves" class="text-white w-5 h-5"></i>
+                </div>
+                <span class="hidden md:block font-extrabold text-xl tracking-tighter">ECHO</span>
+            </div>
+
+            <div class="flex-1 w-full space-y-2 overflow-y-auto scrollbar-hide">
+                <button onclick="switchTab('home')"
+                    class="nav-item active w-full flex items-center gap-4 p-4 rounded-2xl transition-all">
+                    <i data-lucide="home" class="w-5 h-5"></i>
+                    <span class="font-semibold text-sm">Home</span>
+                </button>
+                <button onclick="switchTab('resonance')"
+                    class="nav-item w-full flex items-center gap-4 p-4 rounded-2xl transition-all">
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                    <span class="font-semibold text-sm">Analyze</span>
+                </button>
+                <button onclick="switchTab('rewrite')"
+                    class="nav-item w-full flex items-center gap-4 p-4 rounded-2xl transition-all">
+                    <i data-lucide="pencil" class="w-5 h-5"></i>
+                    <span class="font-semibold text-sm">Rewrite Mode</span>
+                </button>
+                <button onclick="switchTab('strategy')"
+                    class="nav-item w-full flex items-center gap-4 p-4 rounded-2xl transition-all">
+                    <i data-lucide="map" class="w-5 h-5"></i>
+                    <span class="font-semibold text-sm">Strategy</span>
+                </button>
+                <button onclick="switchTab('affinity')"
+                    class="nav-item w-full flex items-center gap-4 p-4 rounded-2xl transition-all">
+                    <i data-lucide="heart" class="w-5 h-5"></i>
+                    <span class="font-semibold text-sm">Dating Mode</span>
+                </button>
+                <button onclick="switchTab('corporate')"
+                    class="nav-item w-full flex items-center gap-4 p-4 rounded-2xl transition-all">
+                    <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    <span class="font-semibold text-sm">Professional</span>
+                </button>
+                <button onclick="switchTab('history')"
+                    class="nav-item w-full flex items-center gap-4 p-4 rounded-2xl transition-all">
+                    <i data-lucide="line-chart" class="w-5 h-5"></i>
+                    <span class="font-semibold text-sm">Insights</span>
+                </button>
+            </div>
+
+            <div class="w-full pt-6 opacity-30">
+                <p class="text-[9px] uppercase tracking-[0.3em] font-black text-center md:text-left px-4">Pro Version
+                </p>
+            </div>
+        </nav>
+
+        <!-- Main Workspace -->
+        <main class="flex-1 overflow-y-auto scrollbar-hide relative">
+            <!-- Tab: Home -->
+            <section id="tab-home" class="tab-content space-y-12 max-w-6xl mx-auto py-12 px-6">
+                <header class="text-center space-y-4 pt-12 fade-up">
+                    <h1 class="hero-title">Welcome to ECHO</h1>
+                    <p class="text-white/40 text-lg font-light max-w-2xl mx-auto">Your Emotionally Intelligent
+                        Companion. Master every interaction with context-aware AI.</p>
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-up">
+                    <div onclick="switchTab('resonance')"
+                        class="glass-panel p-8 rounded-3xl cursor-pointer hover:bg-white/5 hover:translate-y-[-4px] transition-all space-y-4 group">
+                        <i data-lucide="zap"
+                            class="text-blue-500 w-8 h-8 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all"></i>
+                        <h3 class="text-xl font-bold">Resonance Scan</h3>
+                        <p class="text-white/40 text-sm">Decode hidden subtext and clarity.</p>
+                    </div>
+                    <div onclick="switchTab('rewrite')"
+                        class="glass-panel p-8 rounded-3xl cursor-pointer hover:bg-white/5 hover:translate-y-[-4px] transition-all space-y-4 group">
+                        <i data-lucide="pencil"
+                            class="text-rose-500 w-8 h-8 group-hover:drop-shadow-[0_0_10px_rgba(244,63,94,0.5)] transition-all"></i>
+                        <h3 class="text-xl font-bold">Rewrite Mode</h3>
+                        <p class="text-white/40 text-sm">Polish tone for any relationship.</p>
+                    </div>
+                    <div onclick="switchTab('strategy')"
+                        class="glass-panel p-8 rounded-3xl cursor-pointer hover:bg-white/5 hover:translate-y-[-4px] transition-all space-y-4 group">
+                        <i data-lucide="map"
+                            class="text-indigo-500 w-8 h-8 group-hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.5)] transition-all"></i>
+                        <h3 class="text-xl font-bold">Strategy Planner</h3>
+                        <h3 class="text-xl font-bold text-transparent h-0">.</h3> <!-- spacer -->
+                        <p class="text-white/40 text-sm">Build 4-step conversation blueprints.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab: Resonance (Analyze) -->
+            <section id="tab-resonance" class="tab-content hidden opacity-0 space-y-8 max-w-4xl mx-auto py-12 px-6">
+                <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i data-lucide="zap" class="text-blue-500"></i>
+                        Emotional Resonance Scan
+                    </h2>
+
+                    <div class="space-y-6">
+                        <div class="relative">
+                            <textarea id="messageInput"
+                                class="input-field w-full h-40 bg-white/5 border border-white/10 rounded-2xl p-6 text-lg focus:border-blue-500/50 transition-all outline-none"
+                                placeholder="Paste the message you're about to send..."></textarea>
+                            <label class="input-label">Message Content</label>
+                            <div
+                                class="tone-indicator absolute bottom-4 right-4 w-3 h-3 rounded-full bg-white/10 transition-all duration-500 shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+                            </div>
+                            <div class="reaction-meter-container">
+                                <div class="reaction-meter-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                            <select id="relationshipSelect"
+                                class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-blue-500 outline-none w-full md:w-1/2">
+                                <option value="Stranger">Stranger</option>
+                                <option value="Friend">Friend</option>
+                                <option value="Partner">Partner</option>
+                                <option value="Boss">Boss/Professional</option>
+                            </select>
+                            <button type="button" id="analyzeBtn" onclick="analyzeMessage()"
+                                class="romantic-btn w-full md:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 active:scale-95">
+                                <span>Analyze Resonance</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="resonance-results" class="hidden space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="glass-panel p-6 rounded-2xl text-center">
+                            <span class="visual-block-label" title="Dominant emotion detected">Emotion</span>
+                            <div id="res-emotion" class="text-2xl font-bold text-blue-400">---</div>
+                        </div>
+                        <div class="glass-panel p-6 rounded-2xl text-center">
+                            <span class="visual-block-label" title="Clarity of message">Clarity</span>
+                            <div id="res-clarity" class="text-2xl font-bold text-green-400">0%</div>
+                        </div>
+                        <div class="glass-panel p-6 rounded-2xl text-center">
+                            <span class="visual-block-label" title="Empathy level">Empathy</span>
+                            <div id="res-empathy" class="text-2xl font-bold text-purple-400">0%</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-8 rounded-3xl relative overflow-hidden">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-bold">Conflict Risk Index</h3>
+                            <div id="res-risk"
+                                class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-green-500/20 text-green-400">
+                                Low</div>
+                        </div>
+                        <div class="w-full h-3 bg-white/5 rounded-full overflow-hidden">
+                            <div id="res-risk-bar" class="h-full bg-blue-500 transition-all duration-1000 ease-out"
+                                style="width: 10%"></div>
+                        </div>
+                    </div>
+
+                    <details class="glass-panel rounded-2xl overflow-hidden group">
+                        <summary
+                            class="p-6 cursor-pointer flex justify-between items-center hover:bg-white/5 transition-all outline-none">
+                            <span class="font-bold flex items-center gap-2"><i data-lucide="book-open"
+                                    class="w-4 h-4 text-blue-400"></i> Deep Insights</span>
+                            <i data-lucide="chevron-down"
+                                class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="p-8 pt-0 text-white/60 leading-relaxed text-sm" id="res-interpretation">...</div>
+                    </details>
+
+                    <!-- Suggested Improvements Section -->
+                    <div class="space-y-4 fade-up">
+                        <h3 class="font-bold text-lg flex items-center gap-2">
+                            <i data-lucide="sparkles" class="text-yellow-400 w-5 h-5"></i>
+                            Suggested Improvements
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="rewrite-grid">
+                            <!-- Cards will be injected by script.js -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab: Rewrite -->
+            <section id="tab-rewrite" class="tab-content hidden opacity-0 space-y-8 max-w-4xl mx-auto py-12 px-6">
+                <div class="glass-panel p-8 rounded-3xl relative overflow-hidden">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i data-lucide="pencil" class="text-rose-500"></i>
+                        Nuanced Rewrite Engine
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="relative">
+                            <textarea id="rewrite-input"
+                                class="input-field w-full h-40 bg-white/5 border border-white/10 rounded-2xl p-6 text-lg focus:border-rose-500/50 transition-all outline-none"
+                                placeholder="Type what you want to improve..."></textarea>
+                            <label class="input-label">Original Content</label>
+                            <div
+                                class="tone-indicator absolute bottom-4 right-4 w-3 h-3 rounded-full bg-white/10 transition-all duration-500">
+                            </div>
+                            <div class="reaction-meter-container">
+                                <div class="reaction-meter-bar"></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <select id="rewrite-rel"
+                                class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm outline-none">
+                                <option value="Partner">Life Partner</option>
+                                <option value="Friend">Friend</option>
+                                <option value="Colleague">Colleague</option>
+                            </select>
+                            <select id="rewrite-style"
+                                class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm outline-none">
+                                <option value="Soft & Empathetic">Soft & Empathetic</option>
+                                <option value="Direct but Kind">Direct but Kind</option>
+                                <option value="Playful">Playful</option>
+                            </select>
+                        </div>
+                        <button type="button" id="main-rewrite-btn"
+                            class="romantic-btn w-full bg-rose-600 hover:bg-rose-500 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-rose-500/20">Polish
+                            Content</button>
+                    </div>
+                </div>
+                <div id="rewrite-result-div" class="hidden space-y-6">
+                    <div class="glass-panel p-8 rounded-3xl border-rose-500/20 relative">
+                        <button onclick="copyToClipboard(document.getElementById('rewrite-output').textContent, this)"
+                            class="absolute top-4 right-4 text-white/20 hover:text-rose-400 transition-colors"><i
+                                data-lucide="copy" class="w-4 h-4"></i></button>
+                        <h4 class="visual-block-label mb-4 text-rose-400 uppercase tracking-widest text-[10px]">Polished
+                            suggestion</h4>
+                        <div id="rewrite-output" class="text-lg leading-relaxed text-white/90"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab: Strategy -->
+            <section id="tab-strategy" class="tab-content hidden opacity-0 space-y-8 max-w-4xl mx-auto py-12 px-6">
+                <div class="glass-panel p-8 rounded-3xl relative overflow-hidden">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i data-lucide="map" class="text-indigo-500"></i>
+                        Conversation Architect
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="relative">
+                            <textarea id="strategy-goal"
+                                class="input-field w-full h-32 bg-white/5 border border-white/10 rounded-2xl p-6 text-lg focus:border-indigo-500/50 transition-all outline-none"
+                                placeholder="What is your conversation goal?"></textarea>
+                            <label class="input-label">Strategic Goal</label>
+                            <div
+                                class="tone-indicator absolute bottom-4 right-4 w-3 h-3 rounded-full bg-white/10 transition-all duration-500">
+                            </div>
+                            <div class="reaction-meter-container">
+                                <div class="reaction-meter-bar"></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <select id="strategy-rel"
+                                class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm outline-none">
+                                <option value="Manager">Manager</option>
+                                <option value="Partner">Partner</option>
+                                <option value="Friend">Friend</option>
+                            </select>
+                            <button type="button" id="strategy-btn"
+                                class="romantic-btn w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-indigo-500/20">Build
+                                Blueprint</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="strategy-result" class="hidden space-y-4">
+                    <div id="strategy-steps" class="grid grid-cols-1 gap-4"></div>
+                </div>
+            </section>
+
+            <!-- Tab: Dating (Affinity) -->
+            <section id="tab-affinity" class="tab-content hidden opacity-0 space-y-8 max-w-4xl mx-auto py-12 px-6">
+                <div class="glass-panel p-8 rounded-3xl relative overflow-hidden">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i data-lucide="heart" class="text-pink-500"></i>
+                        Dating & Attraction
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="relative">
+                            <textarea id="interest-input"
+                                class="input-field w-full h-24 bg-white/5 border border-white/10 rounded-2xl p-6 text-lg focus:border-pink-500/50 transition-all outline-none"
+                                placeholder="A message showing interest..."></textarea>
+                            <label class="input-label">Interest Insight</label>
+                            <div
+                                class="tone-indicator absolute bottom-4 right-4 w-3 h-3 rounded-full bg-white/10 transition-all duration-500">
+                            </div>
+                            <div class="reaction-meter-container">
+                                <div class="reaction-meter-bar"></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <button type="button" id="interest-btn"
+                                class="romantic-btn bg-pink-600 hover:bg-pink-500 text-white font-bold py-4 rounded-xl shadow-pink-500/20 shadow-lg">Check
+                                Interest</button>
+                            <button type="button" id="confess-btn"
+                                class="romantic-btn bg-white/5 hover:bg-white/10 text-pink-400 border border-pink-500/30 font-bold py-4 rounded-xl">Advice
+                                for Confession</button>
+                            <!-- Hidden input for confession if needed, usually same textarea is used -->
+                            <input type="hidden" id="confess-input" value="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Simulating confession input link -->
+                <script>document.getElementById('confess-btn').addEventListener('click', () => { document.getElementById('confess-input').value = document.getElementById('interest-input').value; });</script>
+
+                <div id="affinity-result" class="hidden">
+                    <div class="glass-panel p-8 rounded-3xl border-pink-500/20">
+                        <h4 class="visual-block-label mb-4 text-pink-400 uppercase tracking-widest text-[10px]">AI
+                            Attraction Advice</h4>
+                        <div id="affinity-text" class="text-lg leading-relaxed text-white/90 italic"></div>
+                    </div>
+                </div>
+
+                <!-- Vision Button in Dating Mode -->
+                <div class="glass-panel p-8 rounded-3xl text-center space-y-4 border-dashed border-white/10">
+                    <i data-lucide="camera" class="w-12 h-12 mx-auto text-white/20"></i>
+                    <h3 class="font-bold">Visual Scrutiny</h3>
+                    <p class="text-white/40 text-sm">Upload a screenshot for deep emotional scan.</p>
+                    <button id="vision-btn"
+                        class="romantic-btn bg-white text-black font-bold py-3 px-8 rounded-xl">Scan
+                        Screenshot</button>
+                </div>
+
+                <div id="vision-result" class="hidden space-y-6">
+                    <div class="glass-panel p-8 rounded-3xl border-blue-500/20">
+                        <h4 class="visual-block-label mb-2 text-blue-400 uppercase tracking-widest text-[10px]">
+                            Extracted Context</h4>
+                        <div id="vision-extracted" class="text-sm text-white/60 mb-6"></div>
+                        <h4 class="visual-block-label mb-2 text-blue-400 uppercase tracking-widest text-[10px]">Deep
+                            Interpretation</h4>
+                        <div id="vision-interpretation" class="text-xl font-bold text-white mb-4"></div>
+                        <h4 class="visual-block-label mb-2 text-blue-400 uppercase tracking-widest text-[10px]">
+                            Suggested Pivot</h4>
+                        <div id="vision-suggestion" class="text-lg text-white/80"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab: Professional (Corporate) -->
+            <section id="tab-corporate" class="tab-content hidden opacity-0 space-y-8 max-w-4xl mx-auto py-12 px-6">
+                <div class="glass-panel p-8 rounded-3xl relative overflow-hidden">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i data-lucide="briefcase" class="text-slate-400"></i>
+                        Professional Polish
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="relative">
+                            <textarea id="work-input"
+                                class="input-field w-full h-32 bg-white/5 border border-white/10 rounded-2xl p-6 text-lg focus:border-slate-500/50 transition-all outline-none"
+                                placeholder="Draft your professional message..."></textarea>
+                            <label class="input-label">Work Correspondence</label>
+                            <div
+                                class="tone-indicator absolute bottom-4 right-4 w-3 h-3 rounded-full bg-white/10 transition-all duration-500">
+                            </div>
+                            <div class="reaction-meter-container">
+                                <div class="reaction-meter-bar"></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <button type="button" id="unpassive-btn"
+                                class="romantic-btn bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 rounded-xl shadow-lg shadow-slate-500/20">Remove
+                                Passive</button>
+                            <button type="button" id="assertive-btn"
+                                class="romantic-btn bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 rounded-xl shadow-lg shadow-slate-500/20">Make
+                                Assertive</button>
+                            <button type="button" id="apology-btn"
+                                class="romantic-btn bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 rounded-xl shadow-lg shadow-slate-500/20">Professional
+                                Apology</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="corporate-result" class="hidden">
+                    <div class="glass-panel p-8 rounded-3xl border-slate-500/20">
+                        <h4 class="visual-block-label mb-4 text-slate-400 uppercase tracking-widest text-[10px]">
+                            Polished Corporate Draft</h4>
+                        <div id="corporate-text" class="text-lg leading-relaxed text-white/90"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab: History (Insights) -->
+            <section id="tab-history" class="tab-content hidden opacity-0 space-y-12 max-w-6xl mx-auto py-12 px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-panel p-8 rounded-3xl text-center space-y-2">
+                        <span class="visual-block-label">Scans Performed</span>
+                        <div id="stat-count" class="text-4xl font-extrabold text-blue-500">0</div>
+                    </div>
+                    <div class="glass-panel p-8 rounded-3xl text-center space-y-2">
+                        <span class="visual-block-label">Dominant Tone</span>
+                        <div id="stat-emotion" class="text-4xl font-extrabold text-purple-500">N/A</div>
+                    </div>
+                    <div class="glass-panel p-8 rounded-3xl text-center space-y-2">
+                        <span class="visual-block-label">Clarity Average</span>
+                        <div id="stat-growth" class="text-4xl font-extrabold text-green-500">0%</div>
+                    </div>
+                </div>
+                <div class="glass-panel p-10 rounded-[2.5rem] h-[400px]">
+                    <canvas id="historyChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Premium Loader -->
+    <div id="loader-overlay"
+        class="fixed inset-0 z-[100] glass-panel backdrop-blur-3xl hidden opacity-0 flex flex-col items-center justify-center transition-all duration-500">
+        <div class="relative w-32 h-32 flex items-center justify-center mb-8">
+            <div class="absolute inset-0 border-4 border-blue-500/20 rounded-full"></div>
+            <div class="absolute inset-0 border-4 border-t-blue-500 rounded-full animate-spin"></div>
+            <div class="absolute inset-4 border-2 border-t-pink-500 rounded-full animate-spin [animation-duration:3s]">
+            </div>
+        </div>
+        <p id="loader-text" class="text-lg font-light tracking-[0.2em] uppercase text-white/60">Understanding
+            emotions...</p>
+    </div>
+
+    <!-- Emergency Mode Overlay -->
+    <div id="emergency-overlay"
+        class="fixed inset-0 z-[100] bg-red-950/90 backdrop-blur-2xl hidden opacity-0 flex flex-col items-center justify-center transition-all duration-1000">
+        <div class="breathing-circle-emergency mb-12"></div>
+        <h2 class="text-4xl font-extrabold mb-4 p-8 tracking-tighter text-center">Pause. Reflect. Reconnect.</h2>
+        <p class="text-xl text-red-200/60 max-w-xl text-center font-light mb-12">Conflict risk is elevated. Take three
+            deep breaths before replying. Perspective is progress.</p>
+        <button onclick="closeEmergency()"
+            class="px-12 py-5 bg-white text-black font-black rounded-2xl hover:scale-105 transition-all">I'M CALM
+            NOW</button>
+    </div>
+
+    <script src="/static/script.js?v=2"></script>
+</body>
+
+</html>
